@@ -1,0 +1,426 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API doc MDM Customer",
+        "description": "API doc MDM Customer",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "email": "mario.fredrick@mncgroup.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/{business_unit}/customers/profile/store": {
+            "post": {
+                "tags": [
+                    "Add Business Unit Customer Profile"
+                ],
+                "summary": "Create new raw data of Customer",
+                "description": "Use json payload to create new data",
+                "operationId": "storeProfile",
+                "parameters": [
+                    {
+                        "name": "SecretKey",
+                        "in": "header",
+                        "description": "client api token key",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "customer_id": {
+                                        "description": "customer id",
+                                        "type": "string"
+                                    },
+                                    "first_name": {
+                                        "description": "nama depan",
+                                        "type": "string"
+                                    },
+                                    "full_name": {
+                                        "description": "nama lengkap",
+                                        "type": "string"
+                                    },
+                                    "middle_name": {
+                                        "description": "nama tengah",
+                                        "type": "string"
+                                    },
+                                    "last_name": {
+                                        "description": "nama belakang",
+                                        "type": "string"
+                                    },
+                                    "surname": {
+                                        "description": "nama marga",
+                                        "type": "string"
+                                    },
+                                    "nickname": {
+                                        "description": "nama panggilan",
+                                        "type": "string"
+                                    },
+                                    "gender": {
+                                        "description": "gender",
+                                        "type": "string"
+                                    },
+                                    "dob": {
+                                        "description": "tanggal lahir",
+                                        "type": "string"
+                                    },
+                                    "pob": {
+                                        "description": "tempat lahir",
+                                        "type": "string"
+                                    },
+                                    "address": {
+                                        "description": "alamat",
+                                        "type": "string"
+                                    },
+                                    "nomor": {
+                                        "description": "nomor",
+                                        "type": "string"
+                                    },
+                                    "blok": {
+                                        "description": "blok",
+                                        "type": "string"
+                                    },
+                                    "rt": {
+                                        "description": "rt",
+                                        "type": "string"
+                                    },
+                                    "rw": {
+                                        "description": "rw",
+                                        "type": "string"
+                                    },
+                                    "kelurahan": {
+                                        "description": "kelurahan",
+                                        "type": "string"
+                                    },
+                                    "kecamatan": {
+                                        "description": "kecamatan",
+                                        "type": "string"
+                                    },
+                                    "kota": {
+                                        "description": "kota",
+                                        "type": "string"
+                                    },
+                                    "propinsi": {
+                                        "description": "propinsi",
+                                        "type": "string"
+                                    },
+                                    "kodepos": {
+                                        "description": "kode pos",
+                                        "type": "string"
+                                    },
+                                    "longitude": {
+                                        "description": "longitude",
+                                        "type": "string"
+                                    },
+                                    "latitude": {
+                                        "description": "latitude",
+                                        "type": "string"
+                                    },
+                                    "status_tempat_tinggal": {
+                                        "description": "status tempat tinggal",
+                                        "type": "string"
+                                    },
+                                    "type_tempat_tinggal": {
+                                        "description": "type tempat tinggal",
+                                        "type": "string"
+                                    },
+                                    "category_tempat_tinggal": {
+                                        "description": "category tempat tinggal",
+                                        "type": "string"
+                                    },
+                                    "email1": {
+                                        "description": "email1",
+                                        "type": "string"
+                                    },
+                                    "email2": {
+                                        "description": "email2",
+                                        "type": "string"
+                                    },
+                                    "telepon_rumah": {
+                                        "description": "telepon rumah",
+                                        "type": "number"
+                                    },
+                                    "telepon_kantor": {
+                                        "description": "telepon kantor",
+                                        "type": "number"
+                                    },
+                                    "fax": {
+                                        "description": "fax",
+                                        "type": "number"
+                                    },
+                                    "mobile_phone1": {
+                                        "description": "mobile phone 1",
+                                        "type": "number"
+                                    },
+                                    "mobile_phone2": {
+                                        "description": "mobile phone 2",
+                                        "type": "number"
+                                    },
+                                    "ktp": {
+                                        "description": "ktp",
+                                        "type": "string"
+                                    },
+                                    "suku": {
+                                        "description": "suku",
+                                        "type": "string"
+                                    },
+                                    "kewarganegaraan": {
+                                        "description": "kewarganegaraan",
+                                        "type": "string"
+                                    },
+                                    "negara": {
+                                        "description": "negara",
+                                        "type": "string"
+                                    },
+                                    "religion": {
+                                        "description": "religion",
+                                        "type": "string"
+                                    },
+                                    "pendidikan": {
+                                        "description": "pendidikan",
+                                        "type": "string"
+                                    },
+                                    "profesi": {
+                                        "description": "profesi",
+                                        "type": "string"
+                                    },
+                                    "golongan_darah": {
+                                        "description": "golongan darah",
+                                        "type": "string"
+                                    },
+                                    "status_kawin": {
+                                        "description": "status kawin",
+                                        "type": "string"
+                                    },
+                                    "mortalitas": {
+                                        "description": "mortalitas",
+                                        "type": "string"
+                                    },
+                                    "status_keaktifan": {
+                                        "description": "status keaktifan",
+                                        "type": "string"
+                                    },
+                                    "status_pengkinian_data": {
+                                        "description": "status pengkinian data",
+                                        "type": "string"
+                                    },
+                                    "product": {
+                                        "description": "product",
+                                        "type": "string"
+                                    },
+                                    "category": {
+                                        "description": "category",
+                                        "type": "string"
+                                    },
+                                    "id_type": {
+                                        "description": "id type",
+                                        "type": "string"
+                                    },
+                                    "home_address_2": {
+                                        "description": "home address 2",
+                                        "type": "string"
+                                    },
+                                    "kode_pos": {
+                                        "description": "kode pos",
+                                        "type": "string"
+                                    },
+                                    "home_country": {
+                                        "description": "home country",
+                                        "type": "string"
+                                    },
+                                    "current_position": {
+                                        "description": "current position",
+                                        "type": "string"
+                                    },
+                                    "annual_income": {
+                                        "description": "annual income",
+                                        "type": "string"
+                                    },
+                                    "source_of_addl_income": {
+                                        "description": "source of addl income",
+                                        "type": "string"
+                                    },
+                                    "additional_income": {
+                                        "description": "additional income",
+                                        "type": "string"
+                                    },
+                                    "spouse_full_name": {
+                                        "description": "spouse full name",
+                                        "type": "string"
+                                    },
+                                    "spouse_middle_name": {
+                                        "description": "spouse middle name",
+                                        "type": "string"
+                                    },
+                                    "spouse_last_name": {
+                                        "description": "spouse last name",
+                                        "type": "string"
+                                    },
+                                    "spouse_relationship": {
+                                        "description": "spouse relationship",
+                                        "type": "string"
+                                    },
+                                    "spouse_date_of_birth": {
+                                        "description": "spouse date of birth",
+                                        "type": "string"
+                                    },
+                                    "spouse_place_of_birth": {
+                                        "description": "spouse place of birth",
+                                        "type": "string"
+                                    },
+                                    "spouse_gender": {
+                                        "description": "spouse gender",
+                                        "type": "string"
+                                    },
+                                    "spouse_marital_status": {
+                                        "description": "spouse marital status",
+                                        "type": "string"
+                                    },
+                                    "spouse_religion": {
+                                        "description": "spouse religion",
+                                        "type": "string"
+                                    },
+                                    "spouse_nationality": {
+                                        "description": "spouse nationality",
+                                        "type": "string"
+                                    },
+                                    "spouse_id_type": {
+                                        "description": "spouse id type",
+                                        "type": "string"
+                                    },
+                                    "spouse_id_no": {
+                                        "description": "spouse id no",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_address_1": {
+                                        "description": "spouse home address 1",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_address_2": {
+                                        "description": "spouse home address 2",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_district": {
+                                        "description": "spouse home district",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_subdistrict": {
+                                        "description": "spouse home subdistrict",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_city": {
+                                        "description": "spouse home city",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_province": {
+                                        "description": "spouse home province",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_postal_code": {
+                                        "description": "spouse home postal code",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_country": {
+                                        "description": "spouse home country",
+                                        "type": "string"
+                                    },
+                                    "spouse_house_status": {
+                                        "description": "spouse home status",
+                                        "type": "string"
+                                    },
+                                    "spouse_home_phone_no": {
+                                        "description": "spouse home phone no",
+                                        "type": "string"
+                                    },
+                                    "spouse_mobile_phone_no": {
+                                        "description": "spouse mobile phone no",
+                                        "type": "string"
+                                    },
+                                    "spouse_email_address": {
+                                        "description": "spouse email address",
+                                        "type": "string"
+                                    },
+                                    "spouse_occupation": {
+                                        "description": "spouse occupation",
+                                        "type": "string"
+                                    },
+                                    "spouse_current_position": {
+                                        "description": "spouse current position",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/{business_unit}/customers/profile/search": {
+            "post": {
+                "tags": [
+                    "Retrieve Business Unit Customer Profile"
+                ],
+                "summary": "Retrieve Customer Data",
+                "description": "Use json payload to retrieve customer data",
+                "operationId": "retrieveProfile",
+                "parameters": [
+                    {
+                        "name": "SecretKey",
+                        "in": "header",
+                        "description": "client api token key",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "customer_id": {
+                                        "description": "customer id",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Add Business Unit Customer Profile",
+            "description": "Create new raw data Customer API response"
+        },
+        {
+            "name": "Retrieve Business Unit Customer Profile",
+            "description": "Create new raw data of Customer's products"
+        }
+    ]
+}
