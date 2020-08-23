@@ -12,11 +12,9 @@ class MdmLookupsTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::connection('mysql')->table('mdm_lookups')->delete();
         
-
-        \DB::table('mdm_lookups')->delete();
-        
-        \DB::table('mdm_lookups')->insert(array (
+        \DB::connection('mysql')->table('mdm_lookups')->insert(array (
             0 => 
             array (
                 'id' => 294,

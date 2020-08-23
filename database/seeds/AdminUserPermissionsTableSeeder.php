@@ -12,11 +12,9 @@ class AdminUserPermissionsTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::connection('mysql')->table('admin_user_permissions')->delete();
         
-
-        \DB::table('admin_user_permissions')->delete();
-        
-        \DB::table('admin_user_permissions')->insert(array (
+        \DB::connection('mysql')->table('admin_user_permissions')->insert(array (
             0 => 
             array (
                 'user_id' => 1,

@@ -37,7 +37,7 @@ class BankAccount extends Model
                         'statusData'
                     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public static function boot()
     {

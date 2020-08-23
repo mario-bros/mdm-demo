@@ -9,7 +9,7 @@ class ProfileClean extends Model
     protected $table = 'mdm_staging_customer_profile_clean';
 
     // protected $hidden = ['u_id'];
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
     protected $primaryKey = 'id';
 
     // protected $dateFormat = 'Y-m-d H:i:s.uO';

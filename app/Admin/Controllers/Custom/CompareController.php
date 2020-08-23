@@ -338,10 +338,6 @@ class CompareController extends Controller
         // Get uid from unit
         $body = $this->getFormGoldenRecord()->edit($id);
 
-        // Session::put('lookup_name', 'pgsql');
-
-        // Get data golden records
-        // $goldenRecords = $this->LoadDetail($body);
         $goldenRecords = $this->LoadDetailGoldenRecord($body);
         
 

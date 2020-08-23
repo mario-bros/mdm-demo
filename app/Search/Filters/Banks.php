@@ -10,7 +10,7 @@ class Banks implements Filter
     {
         $builder->whereHas('bank', function (Builder $query) use ($criteriaValues) {
             foreach ($criteriaValues as $filterField => $value) {
-                $query->where($filterField, 'ILIKE', '%' . $value . '%');
+                $query->where($filterField, 'LIKE', '%' . $value . '%');
             }
         });
 

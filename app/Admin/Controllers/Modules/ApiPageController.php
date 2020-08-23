@@ -74,8 +74,6 @@ class ApiPageController extends AdminController
      */
     protected function grid()
     {
-        // Session::put('lookup_name', 'pgsql');
-
         $grid = new Grid(new MasterCompany());
 
         $grid->column('id', 'ID')->sortable();
@@ -98,8 +96,8 @@ class ApiPageController extends AdminController
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
             $filter->column(1 / 2, function ($filter) {
-                $filter->ilike('full_name', __('Full Name'));
-                $filter->ilike('brand_name', __('Brand Name'));
+                $filter->like('full_name', __('Full Name'));
+                $filter->like('brand_name', __('Brand Name'));
             });
         });
 

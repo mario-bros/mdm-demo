@@ -12,9 +12,9 @@ class MdmCustomerProfileWebTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('mdm_customer_profile_web')->delete();
+        \DB::connection('mysql')->table('mdm_customer_profile_web')->delete();
         
-        \DB::table('mdm_customer_profile_web')->insert(array (
+        \DB::connection('mysql')->table('mdm_customer_profile_web')->insert(array (
             0 => 
             array (
                 'u_id' => '0000002A-0F96-4E03-903D-9FC0D37E0280',

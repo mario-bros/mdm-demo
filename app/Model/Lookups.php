@@ -9,7 +9,7 @@ class Lookups extends Model
 {
     public $timestamps = false;
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
     protected $table = 'mdm_lookups';
 	protected $fillable = [
         'lookup_name', 

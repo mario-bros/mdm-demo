@@ -11,5 +11,5 @@ class MDMBank extends Model
 	    'name'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 }

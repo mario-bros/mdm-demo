@@ -94,8 +94,8 @@ class CompanyController extends AdminController
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
             $filter->column(1 / 2, function ($filter) {
-                $filter->ilike('full_name', __('Full Name'));
-                $filter->ilike('brand_name', __('Brand Name'));
+                $filter->like('full_name', __('Full Name'));
+                $filter->like('brand_name', __('Brand Name'));
                 $filter->between('last_update', __('Last Update Between'))->date();
             });
         });

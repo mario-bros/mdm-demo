@@ -48,17 +48,6 @@ class Profile extends Model
     protected $primaryKey = 'u_id';
     protected $keyType = 'string';
 
-    /*public function __construct(){
-        parent::__construct();
-        $this->connection = \Session::get('lookup_name');
-        // print_r($this->connection); exit(' bye ');
-
-        if($this->connection == 'pgsql' && !Session('edit_certified')) {
-            $this->primaryKey = 'u_id';
-            $this->keyType = 'string';
-        }
-    }*/
-
     public static function boot()
     {
         parent::boot();

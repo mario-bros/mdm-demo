@@ -11,7 +11,7 @@ class MDMDistrict extends Model
 	    'regency_id', 'name'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
     protected $primaryKey = 'id';
     protected $keyType = 'string';
 

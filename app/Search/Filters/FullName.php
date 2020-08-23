@@ -17,6 +17,6 @@ class FullName implements Filter
     public static function apply(Builder $builder, $value)
     {
         // dd($value);
-        return $builder->where('full_name', 'ILIKE', '%' . $value . '%');
+        return $builder->where('full_name', 'LIKE', '%' . $value . '%');
     }
 }

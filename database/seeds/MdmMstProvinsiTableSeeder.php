@@ -12,11 +12,9 @@ class MdmMstProvinsiTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::connection('mysql')->table('mdm_mst_provinsi')->delete();
         
-
-        \DB::table('mdm_mst_provinsi')->delete();
-        
-        \DB::table('mdm_mst_provinsi')->insert(array (
+        \DB::connection('mysql')->table('mdm_mst_provinsi')->insert(array (
             0 => 
             array (
                 'id' => '11',

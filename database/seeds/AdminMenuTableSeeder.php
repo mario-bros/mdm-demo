@@ -12,11 +12,9 @@ class AdminMenuTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::connection('mysql')->table('admin_menu')->delete();
         
-
-        \DB::table('admin_menu')->delete();
-        
-        \DB::table('admin_menu')->insert(array (
+        \DB::connection('mysql')->table('admin_menu')->insert(array (
             0 => 
             array (
                 'id' => 2,

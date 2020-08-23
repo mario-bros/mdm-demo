@@ -97,8 +97,6 @@ class CustomerController extends Controller
      */
     protected function grid()
     {
-        // Session::put('lookup_name', 'pgsql'); 
-        // dd(session()->all());
         $emptyRows = true;
 
         $queryUrl = $_GET;
@@ -197,33 +195,24 @@ class CustomerController extends Controller
             $filter->disableIdFilter();
 
             $filter->column(1 / 2, function ($filter) {
-                $filter->ilike('customer_id', __('Customer ID'));
+                $filter->like('customer_id', __('Customer ID'));
 
                 $filter->between('dob', __('DOB'))->date();
 
                 $filter->equal('propinsi_id', __('Propinsi'))->select( MDMProvince::pluck('name', 'id') )->load('kota_id', '/api/city');
                 $filter->equal('kota_id', __('Kota / Kabupaten'))->select( [] );
-                // $filter->equal('kota_id', __('Kota / Kabupaten'))->select( MDMCity::pluck('name', 'id') )->load('kelurahan_id', '/api/city');
-
-                // $kotaCollection = collect( DB::select('SELECT distinct(kota) as kota FROM mdm_staging_customer_profile_clean ORDER by kota') );
-                // $filter->equal('kota')->select( $kotaCollection->pluck('kota', 'kota') );
             });
 
             $filter->column(1 / 2, function ($filter) use ($unitBrandNames) {
-                $filter->ilike('full_name', 'Name Contains');
-                // $filter->like('full_name', __('Customer Full Name'));
+                $filter->like('full_name', 'Name Contains');
 
                 $filter->equal('email1', __('Email'))->email();
 
                 if ( Admin::user()->inRoles(['holding', 'moderator', 'administrator']) ) {
-                    // $filter->ilike('unit', __('Unit'));
                     $filter->where(function ($query)  {
                         $unit = $this->input;
                         $query->where('unit', '=', $unit);
-                        /*$query->whereHas('unit', function ($query) use ($unit) {
-                            $query->select('id');
-                            $query->where('unit', '=', $unit);
-                        });*/
+                        
                     }, 'Unit', 'unit')->select( $unitBrandNames );
                 }
             });

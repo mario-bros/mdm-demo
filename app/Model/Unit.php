@@ -32,7 +32,7 @@ class Unit extends Model
                         'statusKeaktifanID'
                     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public static function boot()
     {

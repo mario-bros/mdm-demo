@@ -28,7 +28,7 @@ class MasterCompany extends Model
         'api_secret_key',
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public static $businessUnitPaths = [
         'MKAP' => 'mkapital',

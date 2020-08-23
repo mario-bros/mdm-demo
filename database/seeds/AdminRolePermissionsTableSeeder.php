@@ -12,11 +12,9 @@ class AdminRolePermissionsTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::connection('mysql')->table('admin_role_permissions')->delete();
         
-
-        \DB::table('admin_role_permissions')->delete();
-        
-        \DB::table('admin_role_permissions')->insert(array (
+        \DB::connection('mysql')->table('admin_role_permissions')->insert(array (
             0 => 
             array (
                 'role_id' => 1,

@@ -19,7 +19,7 @@ class Attachment extends Model
         'updated_by',
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public static function boot()
     {

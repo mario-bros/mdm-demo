@@ -15,7 +15,7 @@ return [
     |
      */
 
-    'default'     => env('DB_CONNECTION', 'pgsql'),
+    'default'     => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ return [
 
     'connections' => [
 
-        'pgsql'     => [
+        'mysql'     => [
             'driver'         => 'mysql',
             'url'            => env('DATABASE_URL'),
             'host'           => env('DB_HOST', '127.0.0.1'),
@@ -46,22 +46,34 @@ return [
             'charset'        => 'utf8',
             'prefix'         => '',
             'prefix_indexes' => true,
-            'schema'         => 'mdm_dev',
             'sslmode'        => 'prefer',
         ],
 
-        'report'  => [
+        'FINA' => [
             'driver'         => 'mysql',
             'url'            => env('DATABASE_URL'),
-            'host'           => env('DB_HOST_REPORT', '127.0.0.1'),
-            'port'           => env('DB_PORT_REPORT', '5432'),
-            'database'       => env('DB_DATABASE_REPORT', 'forge'),
-            'username'       => env('DB_USERNAME_REPORT', 'forge'),
-            'password'       => env('DB_PASSWORD_REPORT', ''),
+            'host'           => env('DB_HOST_FINANCE', '127.0.0.1'),
+            'port'           => env('DB_PORT_FINANCE', '3306'),
+            'database'       => env('DB_DATABASE_FINANCE', 'forge'),
+            'username'       => env('DB_USERNAME_FINANCE', 'forge'),
+            'password'       => env('DB_PASSWORD_FINANCE', ''),
             'charset'        => 'utf8',
             'prefix'         => '',
             'prefix_indexes' => true,
-            'schema'         => 'mdm_global_reports_dev',
+            'sslmode'        => 'prefer',
+        ],
+
+        'INSU' => [
+            'driver'         => 'mysql',
+            'url'            => env('DATABASE_URL'),
+            'host'           => env('DB_HOST_INSURANCE', '127.0.0.1'),
+            'port'           => env('DB_PORT_INSURANCE', '3306'),
+            'database'       => env('DB_DATABASE_INSURANCE', 'forge'),
+            'username'       => env('DB_USERNAME_INSURANCE', 'forge'),
+            'password'       => env('DB_PASSWORD_INSURANCE', ''),
+            'charset'        => 'utf8',
+            'prefix'         => '',
+            'prefix_indexes' => true,
             'sslmode'        => 'prefer',
         ],
     ],

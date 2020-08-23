@@ -60,7 +60,7 @@ class Address extends Model
                         'provinsiID'
                     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public static function boot()
     {

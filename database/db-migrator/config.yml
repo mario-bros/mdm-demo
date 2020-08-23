@@ -1,0 +1,14 @@
+mysql:
+    database: mdm_demo
+    username: root
+    password: root
+    host: 127.0.0.1
+    port: 3306
+
+postgresql:
+    database: mdm-demo
+    username: postgres
+    password: postgres
+    host: 127.0.0.1
+    port: 5432
+    ssl_mode: disable

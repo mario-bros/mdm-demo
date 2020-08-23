@@ -40,7 +40,7 @@ class SetPrimaryKeySequenceManual extends Command
     {
         try {
             $sequence = $this->argument('sequence');
-            DB::connection('pgsql')->statement("SELECT nextval('" . $sequence . "'::regclass) as next_sequence_val;");
+            DB::connection('mysql')->statement("SELECT nextval('" . $sequence . "'::regclass) as next_sequence_val;");
 
             $this->info('Sequence value updated');
 

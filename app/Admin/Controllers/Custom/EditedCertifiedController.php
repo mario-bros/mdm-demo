@@ -61,10 +61,6 @@ class EditedCertifiedController extends Controller
      */
     private function formCertified()
     {
-        // Insert data based on staging unit database
-        // Session::put('lookup_name', 'pgsql');
-
-        // Get form insert
         $form = new Form(new Profile); // from business units
         $form->tab('Profile', function ($form) {
 

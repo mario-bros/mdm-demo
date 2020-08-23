@@ -19,7 +19,7 @@ class Product extends Model
 
     protected $hidden = ['u_id'];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     protected $primaryKey = 'id'; 
 

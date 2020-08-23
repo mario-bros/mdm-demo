@@ -16,7 +16,7 @@ class OrderStatus extends Model
         'is_rejected'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public function user()
     {

@@ -17,7 +17,7 @@ class Identities implements Filter
                                 ->where('mdm_lookups.lookup_name', '=', $value);
                     });
                 } else {
-                    $query->where($filterField, 'ILIKE', '%' . $value . '%');
+                    $query->where($filterField, 'LIKE', '%' . $value . '%');
                 }
             }
         });

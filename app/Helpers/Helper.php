@@ -59,7 +59,7 @@ class Helper
         $style = [];
         $u_id   = Profile::on(Session::get('unit_name'))->where('id',request()->segment(3))->pluck('u_id')->first();
 
-        $db_golden  = Profile::on('pgsql')
+        $db_golden  = Profile::on('mysql')
                         ->where('u_id',$u_id)
                         ->first(); 
         $db_unit    = Profile::on(Session::get('unit_name'))

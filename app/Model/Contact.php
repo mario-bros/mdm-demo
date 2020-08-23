@@ -34,7 +34,7 @@ class Contact extends Model
                     ];
 
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public static function boot()
     {

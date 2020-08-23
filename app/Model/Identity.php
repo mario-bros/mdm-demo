@@ -34,7 +34,7 @@ class Identity extends Model
                         'statusData'
                     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     public static function boot()
     {

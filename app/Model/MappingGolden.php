@@ -9,5 +9,5 @@ class MappingGolden extends Model
     protected $table = 'mdm_staging_mapping_uid_golden';
 
     // protected $hidden = ['u_id'];
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 }

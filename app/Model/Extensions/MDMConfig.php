@@ -12,16 +12,7 @@ class MDMConfig extends Model
 	    'type', 'code', 'key', 'value', 'sort', 'detail'
     ];
 
-    protected $connection = 'pgsql';
-
-    /*public function __construct()
-    {
-        parent::__construct();
-
-        $this->connection = 'pgsql';
-        $this->primaryKey = 'u_id';
-        $this->keyType = 'string';
-    }*/
+    protected $connection = 'mysql';
 
     /**
      * [getExtensionsGroup description]

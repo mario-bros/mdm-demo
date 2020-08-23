@@ -33,7 +33,7 @@ class Addresses implements Filter
                                 ->where('mdm_mst_provinsi.name', '=', $value);
                     });
                 } else {
-                    $query->where($filterField, 'ILIKE', '%' . $value . '%');
+                    $query->where($filterField, 'LIKE', '%' . $value . '%');
                 }
             }
         });

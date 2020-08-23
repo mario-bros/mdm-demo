@@ -26,7 +26,7 @@ class Product extends Model
         parent::__construct();
         $this->connection = \Session::get('unit_name');
 
-        if ($this->connection == 'pgsql' && !Session('edit_certified')) {
+        if ($this->connection == 'mysql' && !Session('edit_certified')) {
             // $this->primaryKey = 'u_id';
             // $this->keyType = 'string';
         }

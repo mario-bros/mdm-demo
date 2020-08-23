@@ -11,7 +11,7 @@ class MDMProvince extends Model
 	    'name'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
     protected $primaryKey = 'id';
     protected $keyType = 'string';
 

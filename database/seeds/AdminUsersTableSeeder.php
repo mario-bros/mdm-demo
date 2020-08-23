@@ -12,10 +12,9 @@ class AdminUsersTableSeeder extends Seeder
      */
     public function run()
     {
-
-        \DB::table('admin_users')->delete();
+        \DB::connection('mysql')->table('admin_users')->delete();
         
-        \DB::table('admin_users')->insert(array (
+        \DB::connection('mysql')->table('admin_users')->insert(array (
             0 => 
             array (
                 'id' => 22,

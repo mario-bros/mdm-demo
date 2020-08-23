@@ -12,6 +12,6 @@ class WebEmbed extends Model
         'created_date'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
     public $timestamps = false;
 }

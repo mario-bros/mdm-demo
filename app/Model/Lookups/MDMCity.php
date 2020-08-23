@@ -11,7 +11,7 @@ class MDMCity extends Model
 	    'province_id', 'name', 'kode_area'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
     protected $primaryKey = 'id';
     protected $keyType = 'string';
 

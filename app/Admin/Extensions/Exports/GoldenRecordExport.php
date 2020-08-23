@@ -136,7 +136,7 @@ class GoldenRecordExport extends ViewExporter
         }
 
         if ($fullNameParam != '')
-            $exportData = $exportData->where('full_name', 'ILIKE', '%' . $fullNameParam . '%');
+            $exportData = $exportData->where('full_name', 'LIKE', '%' . $fullNameParam . '%');
 
         if ($customerIDParam != '')
             $exportData = $exportData->where('customer_id', 'LIKE', '%' . $customerIDParam . '%');

@@ -16,6 +16,6 @@ class CustomerId implements Filter
      */
     public static function apply(Builder $builder, $value)
     {
-        return $builder->where('customer_id', 'ILIKE', '%' . $value . '%');
+        return $builder->where('customer_id', 'LIKE', '%' . $value . '%');
     }
 }

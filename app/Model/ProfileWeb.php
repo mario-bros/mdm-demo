@@ -14,7 +14,7 @@ class ProfileWeb extends Model
 {
     protected $table = 'mdm_customer_profile_web';
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     // Solusi sementara
     // protected $primaryKey = 'u_id'; 

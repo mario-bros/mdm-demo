@@ -32,10 +32,10 @@ class LookupController extends AdminController
             $filter->disableIdFilter();
 
             $filter->column(1 / 2, function ($filter) {
-                $filter->ilike('lookup_name', __('Lookup Name'));
+                $filter->like('lookup_name', __('Lookup Name'));
                 $filter->equal('category')->select( Lookups::pluck('category', 'category') );
-                $filter->ilike('kode', __('Kode'));
-                $filter->ilike('description', __('Deskripsi'));
+                $filter->like('kode', __('Kode'));
+                $filter->like('description', __('Deskripsi'));
             });
         });
 

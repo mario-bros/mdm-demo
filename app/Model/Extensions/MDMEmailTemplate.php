@@ -11,5 +11,5 @@ class MDMEmailTemplate extends Model
 	    'name', 'group', 'text', 'status'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 }

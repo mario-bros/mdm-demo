@@ -48,7 +48,7 @@ class Profile extends Model
 
     protected $hidden = ['u_id'];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
     
     // Solusi sementara
     // protected $primaryKey = 'u_id'; 

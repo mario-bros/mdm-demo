@@ -15,7 +15,7 @@ class ApiClientInfo extends Model
         'owner'
     ];
 
-    protected $connection = 'pgsql';
+    protected $connection = 'mysql';
 
     // public static function boot()
     // {

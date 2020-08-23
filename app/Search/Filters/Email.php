@@ -16,6 +16,6 @@ class Email implements Filter
      */
     public static function apply(Builder $builder, $value)
     {
-        return $builder->where('email', 'ILIKE', '%' . $value . '%');
+        return $builder->where('email', 'LIKE', '%' . $value . '%');
     }
 }

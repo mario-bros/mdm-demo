@@ -12,11 +12,9 @@ class MdmMstKecamatanTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::connection('mysql')->table('mdm_mst_kecamatan')->delete();
         
-
-        \DB::table('mdm_mst_kecamatan')->delete();
-        
-        \DB::table('mdm_mst_kecamatan')->insert(array (
+        \DB::connection('mysql')->table('mdm_mst_kecamatan')->insert(array (
             0 => 
             array (
                 'id' => '1101010',

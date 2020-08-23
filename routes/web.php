@@ -23,9 +23,6 @@ Route::get('/', function () {
 Route::get('sys_admin/auth/login', 'Auth\LoginController@getLogin')->name('login');
 Route::post('sys_admin/auth/login', 'Auth\LoginController@postLogin')->name('login.post');
 
-// Route::get('sys_admin/auth/login', 'Auth\LoginController@getLogin');
-// Route::post('sys_admin/auth/login', 'Auth\LoginController@postLogin');
-
 Route::group([
     // 'middleware' => config('admin.route.middleware'),
     'middleware' => [
