@@ -2,7 +2,7 @@
 
 return [
             'SNDO' => [
-                'driver'         => 'pgsql',
+                'driver'         => 'mysql',
                 'url'            => env('DATABASE_URL'),
                 'host'           => env('DB_HOST_SNDO', '127.0.0.1'),
                 'port'           => env('DB_PORT_SNDO', '5432'),

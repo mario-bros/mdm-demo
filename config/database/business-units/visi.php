@@ -2,7 +2,7 @@
 
 return [
             'VISI' => [
-                'driver'         => 'pgsql',
+                'driver'         => 'mysql',
                 'url'            => env('DATABASE_URL'),
                 'host'           => env('DB_HOST_VISION', '127.0.0.1'),
                 'port'           => env('DB_PORT_VISION', '5432'),

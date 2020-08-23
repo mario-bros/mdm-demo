@@ -2,7 +2,7 @@
 
 return [
             'SPIN' => [
-                'driver'         => 'pgsql',
+                'driver'         => 'mysql',
                 'url'            => env('DATABASE_URL'),
                 'host'           => env('DB_HOST_SPIN', '127.0.0.1'),
                 'port'           => env('DB_PORT_SPIN', '5432'),

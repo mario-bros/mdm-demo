@@ -2,7 +2,7 @@
 
 return [
             'PLAY' => [
-                'driver'         => 'pgsql',
+                'driver'         => 'mysql',
                 'url'            => env('DATABASE_URL'),
                 'host'           => env('DB_HOST_PLAY', '127.0.0.1'),
                 'port'           => env('DB_PORT_PLAY', '5432'),

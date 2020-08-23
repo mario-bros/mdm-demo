@@ -2,7 +2,7 @@
 
 return [
             'STAR' => [
-                'driver'         => 'pgsql',
+                'driver'         => 'mysql',
                 'url'            => env('DATABASE_URL'),
                 'host'           => env('DB_HOST_STAR', '127.0.0.1'),
                 'port'           => env('DB_PORT_STAR', '5432'),

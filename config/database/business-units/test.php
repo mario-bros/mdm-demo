@@ -2,7 +2,7 @@
 
 return [
             'TEST' => [
-                'driver'         => 'pgsql',
+                'driver'         => 'mysql',
                 'url'            => env('DATABASE_URL'),
                 'host'           => env('DB_HOST_TEST', '127.0.0.1'),
                 'port'           => env('DB_PORT_TEST', '5432'),
